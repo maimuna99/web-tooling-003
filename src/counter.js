@@ -16,12 +16,17 @@ const Counter = () => {
 
   return (
     <>
-      <header>
+      <div>
         <p data-testid="counter-number">{state}</p>
-        <button data-testide="counter-button" onClick={onButtonClick}>
+        <button
+          data-testide="counter-button"
+          onClick={onButtonClick}
+          className="bg-indigo-600 text-white"
+          style={{ borderRadius: "25px", background: "red" }}
+        >
           click here
         </button>
-      </header>
+      </div>
     </>
   );
 };

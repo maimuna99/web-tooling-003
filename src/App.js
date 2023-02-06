@@ -1,8 +1,9 @@
-import Counter from "./counter";
-
+// import Counter from "./counter";
+import Example from "./Requires2";
 const App = () => (
   <main>
-    <Counter />
+    {/* <Counter /> */}
+    <Example />
   </main>
 );
 
