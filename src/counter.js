@@ -16,13 +16,19 @@ const Counter = () => {
 
   return (
     <>
-      <div>
-        <p data-testid="counter-number">{state}</p>
+      <div style={{ flexWrap: "wrap", display: "flex" }}>
+        <p
+          data-testid="counter-number"
+          className="bg-indigo-600 text-white"
+          style={{ borderRadius: "90px", padding: "6px", margin: "5px" }}
+        >
+          {state}
+        </p>
         <button
           data-testide="counter-button"
           onClick={onButtonClick}
           className="bg-indigo-600 text-white"
-          style={{ borderRadius: "25px", background: "red" }}
+          style={{ borderRadius: "5px", padding: "6px" }}
         >
           click here
         </button>
