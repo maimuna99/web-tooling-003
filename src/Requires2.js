@@ -1,43 +1,43 @@
 import Counter from "./counter";
-import {
-  ArrowPathIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-} from "@heroicons/react/24/outline";
+// import DoneButton from "./disappearingButton";
+import { FcSportsMode, FcLinux, FcReading, FcSelfie } from "react-icons/fc";
 
 const features = [
   {
-    name: "Push to deploy",
+    name: "exercising",
     description:
       "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    icon: "/src/triangle.png",
+    icon: FcSportsMode,
   },
   {
-    name: "SSL certificates",
+    name: "Coding",
     description:
       "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    icon: LockClosedIcon,
+    icon: FcLinux,
   },
   {
-    name: "Simple queues",
+    name: "Reading",
     description:
       "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-    icon: ArrowPathIcon,
+    icon: FcReading,
   },
   {
-    name: "Advanced security",
+    name: "Call Parents",
     description:
       "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    icon: FingerPrintIcon,
+    icon: FcSelfie,
   },
 ];
 
 export default function Example() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="body py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">
+          <h2
+            className="text-lg font-semibold leading-8 tracking-tight "
+            style={{ color: "#FAAB78" }}
+          >
             Healthy habits for a better life
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -50,18 +50,27 @@ export default function Example() {
               <div
                 key={feature.name}
                 className="relative pl-16"
-                style={{ backgroundColor: "#F9F5E7", borderRadius: "20px" }}
+                style={{
+                  backgroundColor: "#F9F5E7",
+                  borderRadius: "20px",
+                  paddingLeft: 50,
+                }}
               >
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div
+                    className="absolute top-5 left-2 flex h-10 w-10 items-center justify-center rounded-lg"
+                    style={{ height: 100, width: 100 }}
+                  >
                     <feature.icon
-                      className="h-6 w-6 text-white"
-                      aria-hidden="true"
-                    />
+                      style={{ height: 100, width: 100 }}
+                    ></feature.icon>
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">
+                <dd
+                  className="mt-2 text-base leading-7 text-gray-600"
+                  style={{ paddingLeft: 60 }}
+                >
                   {feature.description}
                 </dd>
                 <Counter />
