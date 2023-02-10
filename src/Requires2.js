@@ -34,10 +34,7 @@ export default function Example() {
     <div className="body py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2
-            className="text-lg font-semibold leading-8 tracking-tight "
-            style={{ color: "#FAAB78" }}
-          >
+          <h2 className="text-lg font-semibold leading-8 tracking-tight text-red-800">
             Healthy habits for a better life
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -49,28 +46,18 @@ export default function Example() {
             {features.map((feature) => (
               <div
                 key={feature.name}
-                className="relative pl-16"
-                style={{
-                  backgroundColor: "#F9F5E7",
-                  borderRadius: "20px",
-                  paddingLeft: 50,
-                }}
+                className="relative pl-20 bg-orange-50 rounded-lg "
               >
                 <dt className="text-base font-semibold leading-7 text-gray-900">
                   <div
-                    className="absolute top-5 left-2 flex h-10 w-10 items-center justify-center rounded-lg"
-                    style={{ height: 100, width: 100 }}
+                    className="absolute top-5 left-2 flex items-center justify-center rounded-lg Class
+                    Properties"
                   >
-                    <feature.icon
-                      style={{ height: 100, width: 100 }}
-                    ></feature.icon>
+                    <feature.icon className="w-24  h-24"></feature.icon>
                   </div>
                   {feature.name}
                 </dt>
-                <dd
-                  className="mt-2 text-base leading-7 text-gray-600"
-                  style={{ paddingLeft: 60 }}
-                >
+                <dd className="mt-2 text-base leading-7 text-gray-600 pl-6">
                   {feature.description}
                 </dd>
                 <Counter />
